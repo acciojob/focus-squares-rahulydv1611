@@ -1,11 +1,10 @@
 // Select all squares
 let squares = document.querySelectorAll(".square");
 
-// Loop through each square
 squares.forEach((square) => {
 
-    // When mouse enters
-    square.addEventListener("mouseenter", () => {
+    // Mouse over (Cypress supports this)
+    square.addEventListener("mouseover", () => {
         squares.forEach((sq) => {
             if (sq !== square) {
                 sq.style.backgroundColor = "#6F4E37"; // Coffee
@@ -13,8 +12,8 @@ squares.forEach((square) => {
         });
     });
 
-    // When mouse leaves
-    square.addEventListener("mouseleave", () => {
+    // Mouse out
+    square.addEventListener("mouseout", () => {
         squares.forEach((sq) => {
             sq.style.backgroundColor = "#E6E6FA"; // Lavender
         });
